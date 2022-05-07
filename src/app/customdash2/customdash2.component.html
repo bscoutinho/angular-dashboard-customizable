@@ -1,0 +1,65 @@
+<p-button (click)="showBasicDialog2()" icon="pi pi-external-link" label="Open Dialog" ></p-button>
+<p-dialog header="Define your Dashboard" position="top" [maximizable]="true" [(visible)]="displayBasic2" [style]="{width: '50vw'}" [baseZIndex]="10000">
+    <div class="flexBodyDialog">
+
+        <div class="flexFormDialog">
+            <p-dropdown 
+                [options]="listChart"
+                [(ngModel)]="selectedChart"    
+                placeholder="Select a Chart" 
+                optionLabel="name"
+                (onChange)="checkSizeChart()">
+            </p-dropdown>
+    
+            <div class="mt-10">
+                <h5>Select a size:</h5>
+                <div class="p-field-radiobutton mt-10">
+                    <p-radioButton name="sizeChart1" [value]=1 [(ngModel)]="selectedSizeChart" inputId=1 (click)="clickRadio()" [disabled]=rdSimpleDisable></p-radioButton>
+                    <label for="sizeChart1">Simple</label>
+                </div>
+                <div class="p-field-radiobutton mt-10">
+                    <p-radioButton name="sizeChart2" [value]=2 [(ngModel)]="selectedSizeChart" inputId=2 (click)="clickRadio()" [disabled]=rdDoubleDisable></p-radioButton>
+                    <label for="sizeChart2">Double</label>
+                </div>
+            </div>
+    
+            <p-button class="mt-10" icon="pi pi-save" label="Add chart" [disabled]=btnAddChartDisable (click)="addChart()"></p-button>
+        </div>
+
+        <div>
+            <h4>Dashboard List</h4>
+            <ul>
+                <li *ngFor="let obj of dashObj">{{obj.name}} - Size: {{obj.size}}</li>
+            </ul>
+        </div>
+
+    </div>
+    
+    <ng-template pTemplate="footer">
+        <p-button icon="pi pi-check" (click)="displayBasic2=false; addDashboard()" label="Yes" class="p-button-text" [disabled]=btnCreateDashboardDisable></p-button>
+    </ng-template>
+</p-dialog>
+
+<div class="main-container" windowResize (resizeEvent)="setWidth($event)" >
+    <ng-template #maincontainer *ngFor="let obj of dashObj"></ng-template>
+</div>
+
+
+
+<!-- <ng-template #widget1>
+    <dashboard-widget>
+        <widget-1></widget-1>
+    </dashboard-widget>
+</ng-template>
+
+<ng-template #widget2>
+    <widget-2></widget-2>
+</ng-template>
+
+<ng-template #widget3>
+   <widget-2></widget-2>
+</ng-template>
+
+<ng-template #widget1>
+    <widget-2></widget-2>
+</ng-template> -->

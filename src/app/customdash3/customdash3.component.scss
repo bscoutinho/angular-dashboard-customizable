@@ -1,0 +1,77 @@
+.confirmation-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:host ::ng-deep .p-dialog .p-button {
+    min-width: 6rem;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mr-5 {
+    margin-right: 5px;
+}
+
+.flexcontrols {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    background-color: #eceaea;
+    grid-auto-flow: dense;
+    padding: 10px 0px;
+    .container-content {
+        background-color: white;
+        border: 1px solid #c0c0c0
+    }
+}
+
+.grid-content {
+    text-align: center;
+    height: 100px
+}
+
+@media (max-width: 768px)
+{
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px)
+{
+    .main-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px)
+{
+    .main-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1441px) and (max-width: 1920px)
+{
+    .main-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1921px)
+{
+    .main-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+  

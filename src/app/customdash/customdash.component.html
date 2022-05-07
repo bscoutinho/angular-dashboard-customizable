@@ -1,0 +1,130 @@
+<div class="flex-container">
+    <div>
+        <p-dropdown 
+        [options]="listDash" 
+        [(ngModel)]="selectedDash"    
+        placeholder="Select a Dashboard" 
+        optionLabel="name">
+        </p-dropdown>
+    </div>
+    <div>
+        <p-dropdown 
+        [options]="listChart" 
+        [(ngModel)]="selectedChart"    
+        placeholder="Select a Chart" 
+        optionLabel="name">
+      </p-dropdown>
+    </div> 
+  </div>
+
+  <div class="grid-container1" *ngIf="selectedDash.code === 'D01'">
+    <div class="item1">
+        <!-- Pass the component class as an argument to add and remove based on the component class -->
+        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="addComponent(this.selectedChart.code, 'container1')"></button>
+        <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text" (click)="removeComponent('container1')"></button>
+        <!-- Use ng-template to ensure that the generated components end up in the right place -->
+        <ng-template #container1></ng-template>
+    </div>
+    <div>
+        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="addComponent(this.selectedChart.code, 'container2')"></button>
+        <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text" (click)="removeComponent('container2')"></button>
+        <ng-template #container2></ng-template>
+    </div>
+    <div>
+        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="addComponent(this.selectedChart.code, 'container3')"></button>
+        <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text" (click)="removeComponent('container3')"></button>
+        <ng-template #container3></ng-template>
+    </div>  
+    <div>
+        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="addComponent(this.selectedChart.code, 'container4')"></button>
+        <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text" (click)="removeComponent('container4')"></button>
+        <ng-template #container4></ng-template>
+    </div>
+  </div>
+  
+  <div class="grid-container2" *ngIf="selectedDash.code === 'D02'">
+    <div>
+        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="addComponent(this.selectedChart.code, 'container1')"></button>
+        <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text" (click)="removeComponent('container1')"></button>
+        <ng-template #container1></ng-template>
+    </div>
+    <div class="item1">
+        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="addComponent(this.selectedChart.code, 'container2')"></button>
+        <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text" (click)="removeComponent('container2')"></button>
+        <ng-template #container2></ng-template>
+    </div>
+    <div>
+        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="addComponent(this.selectedChart.code, 'container3')"></button>
+        <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text" (click)="removeComponent('container3')"></button>
+        <ng-template #container3></ng-template>
+    </div>  
+    <div>
+        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="addComponent(this.selectedChart.code, 'container4')"></button>
+        <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text" (click)="removeComponent('container4')"></button>
+        <ng-template #container4></ng-template>
+    </div>
+  </div>
+  
+  <div class="grid-container3" *ngIf="selectedDash.code === 'D03'">
+    <div class="item1">
+        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="addComponent(this.selectedChart.code, 'container1')"></button>
+        <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text" (click)="removeComponent('container1')"></button>
+        <ng-template #container1></ng-template>
+    </div>
+    <div>
+        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="addComponent(this.selectedChart.code, 'container2')"></button>
+        <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text" (click)="removeComponent('container2')"></button>
+        <ng-template #container2></ng-template>
+    </div>
+    <div>
+        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="addComponent(this.selectedChart.code, 'container3')"></button>
+        <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text" (click)="removeComponent('container3')"></button>
+        <ng-template #container3></ng-template>
+    </div>
+    <div>
+        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="addComponent(this.selectedChart.code, 'container4')"></button>
+        <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text" (click)="removeComponent('container4')"></button>
+        <ng-template #container4></ng-template>
+    </div>  
+    <div>
+        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="addComponent(this.selectedChart.code, 'container5')"></button>
+        <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text" (click)="removeComponent('container5')"></button>
+        <ng-template #container5></ng-template>
+    </div>
+  </div>
+  
+  <div class="grid-container4" *ngIf="selectedDash.code === 'D04'">
+    <div>
+        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="addComponent(this.selectedChart.code, 'container1')"></button>
+        <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text" (click)="removeComponent('container1')"></button>
+        <ng-template #container1></ng-template>
+    </div>
+    <div>
+        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="addComponent(this.selectedChart.code, 'container2')"></button>
+        <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text" (click)="removeComponent('container2')"></button>
+        <ng-template #container2></ng-template>
+    </div>
+    <div>
+        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="addComponent(this.selectedChart.code, 'container3')"></button>
+        <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text" (click)="removeComponent('container3')"></button>
+        <ng-template #container3></ng-template>
+    </div>
+    <div>
+        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="addComponent(this.selectedChart.code, 'container4')"></button>
+        <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text" (click)="removeComponent('container4')"></button>
+        <ng-template #container4></ng-template>
+    </div>  
+    <div>
+        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="addComponent(this.selectedChart.code, 'container5')"></button>
+        <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text" (click)="removeComponent('container5')"></button>
+        <ng-template #container5></ng-template>
+    </div>
+    <div>
+        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" (click)="addComponent(this.selectedChart.code, 'container6')"></button>
+        <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text" (click)="removeComponent('container6')"></button>
+        <ng-template #container6></ng-template>
+    </div>
+  </div>
+
+
+

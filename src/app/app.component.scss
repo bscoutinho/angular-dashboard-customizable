@@ -1,0 +1,70 @@
+.grid-container1 {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: #eceaea;
+    grid-gap: 10px;
+    background-color: #dfdede;
+    padding: 10px;
+
+    div{
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px 0; 
+    }
+}
+
+.grid-container2 {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  background-color: #dfdede;
+  padding: 10px;
+
+  div {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 0; 
+  }
+
+  .item1 {
+    //Make "item1" start on row 2 column 1, and span 2 rows and 3 columns
+    grid-area: 2 / 1 / span 2 / span 3;
+  }
+}
+
+.grid-container3 {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    background-color: #dfdede;
+    padding: 10px;
+  
+    div {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px 0; 
+    }
+  
+    .item1 {
+      //Make "item1" start on row 1 column 1, and span 3 rows and 1 columns
+      grid-area: 1 / 1 / span 3 / span 1;
+    }
+}
+
+.grid-container4 {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    background-color: #dfdede;
+    padding: 10px;
+
+    div{
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px 0; 
+    }
+}
+
+

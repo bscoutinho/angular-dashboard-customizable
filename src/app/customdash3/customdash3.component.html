@@ -1,0 +1,61 @@
+<div class="flexcontrols">
+    <p-dropdown 
+        [options]="widgetOptions"
+        [(ngModel)]="selectedWidget"    
+        placeholder="Select a Widget" 
+        optionLabel="name"
+        (onChange)="checkSizeChart()">
+    </p-dropdown>
+
+    <div class="flexcontrols">
+        <h4 class="mt-10 mr-5">Select a size:</h4>
+        <div class="p-field-radiobutton mt-10 mr-5">
+            <p-radioButton class="mr-5" name="sizeChart1" [value]=1 [(ngModel)]="selectedSizeWidget" inputId=1 (click)="clickRadio()" [disabled]=rdSimpleDisable></p-radioButton>
+            <label for="sizeChart1">Simple</label>
+        </div>
+        <div class="p-field-radiobutton mt-10">
+            <p-radioButton class="mr-5" name="sizeChart2" [value]=2 [(ngModel)]="selectedSizeWidget" inputId=2 (click)="clickRadio()" [disabled]=rdDoubleDisable></p-radioButton>
+            <label for="sizeChart2">Double</label>
+        </div>
+    </div>
+
+    <p-button class="mt-10" icon="pi pi-save" label="Add" (click)="addWidget()" [disabled]=btnAddWidgetDisable></p-button>
+</div>
+
+
+<div class="main-container">
+    <ng-container #maincontainer *ngFor="let obj of listWidget">
+        <ng-container class="container-content" *ngTemplateOutlet="obj.component; context: { $implicit: obj.size }"></ng-container>
+    </ng-container>
+</div>
+
+<ng-template #areaWidget let-size>
+    <app-areachart class="container-content" [size]="size"></app-areachart>
+</ng-template>
+
+<ng-template #barWidget let-size>
+    <app-barchart class="container-content" [size]="size"></app-barchart>
+</ng-template>
+
+<ng-template #columnWidget>
+    <app-columnchart class="container-content"></app-columnchart>
+</ng-template>
+
+<ng-template #donutWidget>
+    <app-donutchart class="container-content"></app-donutchart>
+</ng-template>
+
+<ng-template #lineWidget let-size>
+    <app-linechart class="container-content" [size]="size"></app-linechart>
+</ng-template>
+
+<ng-template #pieWidget>
+    <app-piechart class="container-content"></app-piechart>
+</ng-template>
+
+<ng-template #blankWidget>
+    <p class="container-content grid-content">Grid</p>
+    <p class="container-content grid-content">Grid</p>
+    <p class="container-content grid-content">Grid</p>
+    <p class="container-content grid-content">Grid</p>
+</ng-template>

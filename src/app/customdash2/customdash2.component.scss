@@ -1,0 +1,41 @@
+:host ::ng-deep .p-button {
+    margin: 0 .5rem 0 0;
+    min-width: 10rem;
+}
+
+p {
+    margin: 0;
+}
+
+.confirmation-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:host ::ng-deep .p-dialog .p-button {
+    min-width: 6rem;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.flexFormDialog {
+    display: flex;
+    flex-direction: column
+}
+
+.flexBodyDialog {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+}
+  
